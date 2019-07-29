@@ -10,6 +10,7 @@ SET CGO_LDFLAGS=-Wl,--kill-at
 SET CGO_ENABLED=1
 SET GOOS=windows
 SET GOARCH=386
+SET GOPROXY=https://goproxy.cn
 
 :: Éú³Éapp.json  
 go generate
