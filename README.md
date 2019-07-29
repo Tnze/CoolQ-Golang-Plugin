@@ -6,6 +6,10 @@
 
 ## 安装环境
 确认你的电脑上安装了go编译器以及gcc编译器
+`go version`  
+`gcc --version`  
+安装cqcfg，用于自动生成app.json的小工具  
+`go install github.com/Tnze/CoolQ-Golang-SDK/tools/cqcfg`
 
 ## 修改路径
 要修改的地方有几处：
