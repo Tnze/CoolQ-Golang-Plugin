@@ -1,5 +1,5 @@
-github.com/Tnze/CoolQ-Golang-SDK v0.0.0-20190830064112-6ba1be0391a6 h1:6sKbEuSs8Stu8K2nwJc3lIv9pl/zR/kwBP7yp7yeWj0=
-github.com/Tnze/CoolQ-Golang-SDK v0.0.0-20190830064112-6ba1be0391a6/go.mod h1:XIWgI6JgLDdHQVN7a2Zegsp5ucwP071+8enN2emd0zg=
+github.com/Tnze/CoolQ-Golang-SDK v0.0.0-20190830163029-96fe66f3e442 h1:pXMJvGx8TSd1MheSA48mcfNG0tE7xOEwNHaAbne411E=
+github.com/Tnze/CoolQ-Golang-SDK v0.0.0-20190830163029-96fe66f3e442/go.mod h1:XIWgI6JgLDdHQVN7a2Zegsp5ucwP071+8enN2emd0zg=
 golang.org/x/text v0.3.2 h1:tW2bmiBqwgJj/UpqtC8EpXEZVYOwU0yG4iWbprSVAcs=
 golang.org/x/text v0.3.2/go.mod h1:bEr9sfX3Q8Zfm5fL9x+3itogRgK3+ptLWKqgva+5dAk=
 golang.org/x/tools v0.0.0-20180917221912-90fa682c2a6e/go.mod h1:n7NCudcB/nEzxVGmLbDWY5pfWTLqBcC2KZ6jyYvM4mQ=
