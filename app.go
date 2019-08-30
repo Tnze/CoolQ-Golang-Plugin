@@ -4,7 +4,7 @@ import "github.com/Tnze/CoolQ-Golang-SDK/cqp"
 
 //go:generate cqcfg -c .
 // cqp: 名称: GoDemo
-// cqp: 版本: 1.0.0:-9
+// cqp: 版本: 1.0.0:-10
 // cqp: 作者: Tnze
 // cqp: 简介: 一个超棒的Go语言插件Demo，它会回复你的私聊消息~
 func main() { /*此处应当留空*/ }

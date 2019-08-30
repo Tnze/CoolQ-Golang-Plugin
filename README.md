@@ -11,6 +11,10 @@
 2. 下载并安装[gcc编译器](http://tdm-gcc.tdragon.net/)；  
 3. 运行脚本安装SDK以及cqcfg小工具：运行`setup.bat`。
 
+> 安装cqcfg的脚本可能会不成功，你可能需要手动安装  
+`github.com/Tnze/CoolQ-Golang-SDK/tools/cqcfg`。  
+若在控制台执行`cqcfg -v`查看版本输出"cqcfg 1.1"则表示安装成功
+
 ## 修改路径
 要修改的地方有几处：
 1. go.mod文件第一行，改为你自己项目的地址
