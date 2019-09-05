@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="812df8f9-d413-4495-a9a2-fe5281535bb8" name="Default Changelist" comment="更新SDK">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-    </list>
+    <list default="true" id="812df8f9-d413-4495-a9a2-fe5281535bb8" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,9 +63,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="更新SDK" />
     <MESSAGE value="更新到新版SDK" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新到新版SDK" />
+    <MESSAGE value="更新SDK" />
+    <MESSAGE value="更新SDK，更新顺序版本号" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新SDK，更新顺序版本号" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
