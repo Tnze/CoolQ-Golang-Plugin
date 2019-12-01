@@ -13,11 +13,10 @@ SET GOARCH=386
 SET GOPROXY=https://goproxy.cn
 
 echo Building app.dll
-go build -buildmode=c-shared -o app.dll
+go build -ldflags "-s -w" -buildmode=c-shared -o app.dll
 IF ERRORLEVEL 1 pause
 
 :: Copy app.dll amd app.json
-:: SET DevDir=D:\¿áQ Pro\dev\me.cqp.tnze.demo
 if defined DevDir (
     echo Coping files
     for %%f in (app.dll,app.json) do move %%f "%DevDir%\%%f" > nul
