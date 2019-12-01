@@ -23,4 +23,6 @@
 ## 编译
 运行`build.bat`
 
+> 关于交叉编译，我制作了可以在Linux和macOS上构建插件的Docker镜像：[coolq-golang-builder](https://hub.docker.com/repository/docker/tnze/coolq-golang-builder)
+
 最后，在酷Q的菜单-应用管理中，点击重载应用，你应该就能看到你的插件了。
