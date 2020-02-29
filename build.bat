@@ -1,9 +1,23 @@
 @echo off
 
 echo Generating app.json
-go build github.com/Tnze/CoolQ-Golang-SDK/v2/tools/cqcfg
+goto GO_GENERATE
+
+:INSTALL_CQCFG
+echo Install cqcfg
+go get github.com/Tnze/CoolQ-Golang-SDK/tools/cqcfg
+SET INSTALLED_CQCFG=true
+
+:GO_GENERATE
+echo Exec go generate
 go generate
-IF ERRORLEVEL 1 pause
+IF ERRORLEVEL 1 (
+	IF "%INSTALLED_CQCFG%"=="true" (
+		echo Auto install cqcfg fail
+		exit
+	)
+	ELSE goto INSTALL_CQCFG
+)
 
 echo Setting env vars
 SET CGO_LDFLAGS=-Wl,--kill-at
