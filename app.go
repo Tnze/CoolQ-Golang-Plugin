@@ -1,6 +1,6 @@
 package main
 
-import "github.com/Tnze/CoolQ-Golang-SDK/v2/cqp"
+import "github.com/Tnze/CoolQ-Golang-SDK/cqp"
 
 //go:generate cqcfg -c .
 // cqp: 名称: GoDemo
