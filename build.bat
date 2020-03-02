@@ -1,39 +1,61 @@
 @echo off
 
-echo Generating app.json
-goto GO_GENERATE
+:: SET DevDir=D:\CoolQ Pro\dev\me.cqp.tnze.demo
 
-:INSTALL_CQCFG
-echo Install cqcfg
-go get github.com/Tnze/CoolQ-Golang-SDK/tools/cqcfg
-SET INSTALLED_CQCFG=true
+echo Setting proxy
+SET GOPROXY=https://goproxy.cn
 
-:GO_GENERATE
-echo Exec go generate
-go generate
+echo Checking go installation...
+go version > nul
 IF ERRORLEVEL 1 (
-	IF "%INSTALLED_CQCFG%"=="true" (
-		echo Auto install cqcfg fail
-		exit
-	)
-	ELSE goto INSTALL_CQCFG
+	echo Please install go first...
+	goto RETURN
 )
 
-echo Setting env vars
+echo Checking gcc installation...
+gcc --version > nul
+IF ERRORLEVEL 1 (
+	echo Please install gcc first...
+	goto RETURN
+)
+
+echo Checking cqcfg installation...
+cqcfg -v
+IF ERRORLEVEL 1 (
+	echo Install cqcfg...
+	go get github.com/Tnze/CoolQ-Golang-SDK/tools/cqcfg
+	IF ERRORLEVEL 1 (
+		echo Install cqcfg fail
+		goto RETURN
+	)
+)
+
+echo Generating app.json ...
+go generate
+IF ERRORLEVEL 1 (
+	echo Generate app.json fail
+	goto RETURN
+)
+echo.
+
+echo Setting env vars..
 SET CGO_LDFLAGS=-Wl,--kill-at
 SET CGO_ENABLED=1
 SET GOOS=windows
 SET GOARCH=386
-SET GOPROXY=https://goproxy.cn
 
-echo Building app.dll
+echo Building app.dll ...
 go build -ldflags "-s -w" -buildmode=c-shared -o app.dll
-IF ERRORLEVEL 1 pause
+IF ERRORLEVEL 1 (pause) ELSE (echo Build success!)
 
-:: Copy app.dll amd app.json
-:: SET DevDir=D:\CoolQ Pro\dev\me.cqp.tnze.demo
 if defined DevDir (
-    echo Coping files
+    echo Copy app.dll amd app.json ...
     for %%f in (app.dll,app.json) do move %%f "%DevDir%\%%f" > nul
     IF ERRORLEVEL 1 pause
 )
+
+exit /B
+
+:RETURN
+pause
+exit /B

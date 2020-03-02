@@ -1,5 +1,3 @@
-github.com/Tnze/CoolQ-Golang-SDK v1.1.0 h1:j4OyH5dn/kGsqaD+94NJ5pSCn7Xfl1PXNyGSbXxIXGw=
-github.com/Tnze/CoolQ-Golang-SDK v1.1.0/go.mod h1:e0wTTiIAcKLmr4JHTUHOo0dLzctmhNE1m3HhNHHGQLA=
 github.com/Tnze/CoolQ-Golang-SDK v1.2.0 h1:0vnuZCFRd3ufSnZd/6sveqmlamIMm3Bnr8M/7veIDLE=
 github.com/Tnze/CoolQ-Golang-SDK v1.2.0/go.mod h1:e0wTTiIAcKLmr4JHTUHOo0dLzctmhNE1m3HhNHHGQLA=
 golang.org/x/text v0.3.2 h1:tW2bmiBqwgJj/UpqtC8EpXEZVYOwU0yG4iWbprSVAcs=
