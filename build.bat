@@ -49,7 +49,7 @@ go build -ldflags "-s -w" -buildmode=c-shared -o app.dll
 IF ERRORLEVEL 1 (pause) ELSE (echo Build success!)
 
 if defined DevDir (
-    echo Copy app.dll amd app.json ...
+    echo Copy app.dll and app.json ...
     for %%f in (app.dll,app.json) do move %%f "%DevDir%\%%f" > nul
     IF ERRORLEVEL 1 pause
 )
